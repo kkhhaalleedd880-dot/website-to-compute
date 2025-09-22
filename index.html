@@ -1,10 +1,177 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>موقعي الفارغ</title>
+  <title>XMAX - واجهة المستخدم</title>
+  <link href="https://fonts.googleapis.com/css?family=Tahoma:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Tahoma', Arial, sans-serif;
+      background: linear-gradient(180deg, #1c2a5a 0%, #223364 100%);
+      color: #fff;
+    }
+    .container {
+      max-width: 420px;
+      margin: 32px auto;
+      background: rgba(28,42,90,0.98);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+      padding-bottom: 18px;
+      overflow: hidden;
+    }
+    .header {
+      padding: 30px 20px 10px;
+      text-align: center;
+      position: relative;
+    }
+    .uae-flag {
+      position: absolute;
+      left: 24px;
+      top: 36px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+    .logo {
+      margin-bottom: 16px;
+      width: 110px;
+      filter: drop-shadow(0 2px 7px #246);
+    }
+    .user-id {
+      font-size: 1.21em;
+      font-weight: bold;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      letter-spacing: 2px;
+    }
+    .desc {
+      font-size: 1em;
+      color: #c3c8d1;
+      margin-bottom: 14px;
+    }
+    .balances {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(22, 36, 80, 0.82);
+      padding: 10px 18px;
+      border-radius: 13px;
+      margin: 14px 16px 0;
+      font-size: 1.16em;
+    }
+    .balances .main, .balances .broker {
+      text-align: center;
+    }
+    .balances .amount {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #80ff80;
+      margin-right: 4px;
+    }
+    .balances .main .amount {
+      color: #a6ffb4;
+    }
+    .balances .main span, .balances .broker span {
+      display: block;
+      color: #e0f3f9;
+      font-size: 0.92em;
+      margin-top: 2px;
+    }
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin: 18px 15px 0;
+    }
+    .actions button {
+      flex: 1;
+      padding: 17px 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .withdraw {
+      background: #293e66;
+      color: #e0e6ed;
+    }
+    .deposit {
+      background: linear-gradient(90deg, #56d36c 0%, #1ed071 100%);
+      color: #fff;
+    }
+    .section-title {
+      font-size: 1.08em;
+      color: #c3c8d1;
+      margin: 26px 18px 8px 0;
+      font-weight: bold;
+      text-align: right;
+    }
+    .list {
+      margin: 0 13px;
+      padding: 0;
+      list-style: none;
+    }
+    .list li {
+      background: #223364;
+      border-radius: 11px;
+      margin-bottom: 11px;
+      padding: 13px 16px;
+      font-size: 1.07em;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 1px 7px rgba(0,0,0,0.03);
+    }
+    .list li i {
+      margin-left: 12px;
+      font-size: 1.14em;
+      color: #72d1e1;
+    }
+    @media (max-width: 540px) {
+      .container { max-width: 98vw; }
+      .header { padding: 18px 6px 7px; }
+      .balances { font-size:1em; }
+      .actions button { font-size:1em; }
+    }
+  </style>
 </head>
 <body>
-  <!-- مرحبًا، هذا موقع فارغ باللغة العربية -->
-</body><img src="DC137807-8075-4597-80FC-83870EBBC0FF.jpeg" alt="واجهة الموقع" style="max-width:100%; height:auto;">
-</html>DC137807-8075-4597-80FC-83870EBBC0FF.jpeg
+  <div class="container">
+    <div class="header">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/1200px-Flag_of_the_United_Arab_Emirates.svg.png" class="uae-flag" alt="علم الإمارات">
+      <img src="https://i.imgur.com/3x7W1zO.png" class="logo" alt="XMAX Logo">
+      <div class="user-id">Qk088 <span style="font-size:1em;">&#128274;</span></div>
+      <div class="desc">نقوم بإعداد وتقديم نظام المكافآت الجديد، ودعم الاتصال للتمكين</div>
+    </div>
+    <div class="balances">
+      <div class="main">
+        <div class="amount">705.74 د.ك</div>
+        <span>الرصيد - الحساب الرئيسي</span>
+      </div>
+      <div class="broker">
+        <div class="amount">114705.74 د.ك</div>
+        <span>رصيد البوكر</span>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="withdraw">سحب الأموال</button>
+      <button class="deposit">إيداع</button>
+    </div>
+    <div class="section-title">التحويلات:</div>
+    <ul class="list">
+      <li><i>💱</i> تحويل الأموال من رصيد البوكر إلى الرصيد الرئيسي</li>
+      <li><i>🔄</i> تحويل الأموال بين المستخدمين</li>
+    </ul>
+    <div class="section-title">الذاكرة:</div>
+    <ul class="list">
+      <li><i>🏆</i> تاريخ الرهان W-الرياضة</li>
+      <li><i>📅</i> تاريخ الودائع</li>
+      <li><i>📜</i> تاريخ السحب النقدي</li>
+    </ul>
+  </div>
+</body>
+</html>
